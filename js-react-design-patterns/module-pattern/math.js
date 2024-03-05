@@ -1,5 +1,3 @@
-const secret = 123;
-
 export function sum(x, y) {
   return x + y;
 }
