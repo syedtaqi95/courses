@@ -1,12 +1,12 @@
-import React from 'react';
-import { Listing } from './Listing';
-import { ListingsGrid } from './ListingsGrid';
+import React from "react";
+import { Listing } from "./Listing.tsx";
+import { ListingsGrid } from "./ListingsGrid.tsx";
 
 export default function Listings() {
-  const [data, setData] = React.useState(null);
+  const [data, setData] = React.useState<any>(null);
 
   React.useEffect(() => {
-    fetch('https://house-lydiahallie.vercel.app/api/listings')
+    fetch("https://house-lydiahallie.vercel.app/api/listings")
       .then((res) => res.json())
       .then((res) => setData(res));
   }, []);
@@ -15,7 +15,7 @@ export default function Listings() {
 
   return (
     <ListingsGrid>
-      {data.listings.map((listing) => (
+      {data.listings.map((listing: any) => (
         <Listing key={listing.id} listing={listing} />
       ))}
     </ListingsGrid>
