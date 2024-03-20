@@ -2,7 +2,10 @@ module mywebsite.tv/syedtaqi95
 
 go 1.22.1
 
-require github.com/labstack/echo/v4 v4.11.4
+require (
+	github.com/labstack/echo/v4 v4.11.4
+	github.com/tdewolff/parse/v2 v2.7.12
+)
 
 require (
 	github.com/golang-jwt/jwt v3.2.2+incompatible // indirect
