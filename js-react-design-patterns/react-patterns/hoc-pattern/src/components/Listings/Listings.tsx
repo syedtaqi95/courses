@@ -3,7 +3,13 @@ import { Listing, ListingProps } from "./Listing";
 import { ListingsGrid } from "./ListingsGrid";
 import withLoader from "../../hoc/withLoader";
 
-export function Listings(props: any) {
+interface Props {
+  data: {
+    listings: ListingProps[];
+  };
+}
+
+export function Listings(props: Props) {
   return (
     <ListingsGrid>
       {props.data.listings.map((listing: ListingProps) => (
