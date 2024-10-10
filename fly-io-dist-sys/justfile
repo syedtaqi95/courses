@@ -1,0 +1,9 @@
+build app_name:
+  mkdir -p maelstrom/bin
+  cd {{app_name}} && go build -o ../maelstrom/bin .
+
+run app_name:
+  cd maelstrom && ./maelstrom test -w echo --bin bin/{{app_name}} --node-count 2 --time-limit 10
+
+serve port='4242':
+  cd maelstrom && ./maelstrom serve -p {{port}}
