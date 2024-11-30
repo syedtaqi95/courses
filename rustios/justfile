@@ -1,0 +1,7 @@
+# Build the application
+build:
+  cargo build --target thumbv7em-none-eabihf
+
+# Run the application
+run:
+  cargo run --target thumbv7em-none-eabihf
